@@ -1,12 +1,14 @@
-/*=============== GOOGLE FONTS ===============*/
+/*=============== GOOGLE FONTS - SYNE ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
 :root {
-  --header-height: 3.5rem;
-  /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
-  /* 
+
+	--header-height: 3.5rem; 	/* Altura del Encabezado: 56px */
+
+	/*========== Colors ==========*/
+	/*Color mode HSL(hue, saturation, lightness)*/
+	/* 
         Change favorite color
         Default: hsl(230, 55%, 55%)
         Purple: hsl(245, 55%, 55%) - Blue: hsl(210, 55%, 55%)
@@ -17,129 +19,132 @@
         -> Choose any color 
         -> Click on tab (Color Conversion)
         -> Copy the color mode (HSL)
-  */
-  --hue: 230;
-  --first-color: hsl(var(--hue), 55%, 55%);
-  --first-color-light: hsl(var(--hue), 55%, 65%);
-  --first-color-alt: hsl(var(--hue), 50%, 50%);
-  --title-color: hsl(var(--hue), 30%, 95%);
-  --text-color: hsl(var(--hue), 20%, 80%);
-  --text-color-light: hsl(var(--hue), 20%, 70%);
-  --body-color: hsl(var(--hue), 40%, 16%);
-  --container-color: hsl(var(--hue), 40%, 20%);
+  	*/
 
-  /*========== Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: "Syne", sans-serif;
-  --biggest-font-size: 3rem;
-  --big-font-size: 1.5rem;
-  --h1-font-size: 1.5rem;
-  --h2-font-size: 1.25rem;
-  --h3-font-size: 1rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
+	--hue: 230; 									/* Matiz */
+	--first-color: hsl(var(--hue), 55%, 55%); 		/* Primer Color */
+	--first-color-light: hsl(var(--hue), 55%, 65%); /* Primer Color Ligero */
+	--first-color-alt: hsl(var(--hue), 50%, 50%); 	/* Primero Color Alternativo */
+	--title-color: hsl(var(--hue), 30%, 95%); 		/* Color de Título */
+	--text-color: hsl(var(--hue), 20%, 80%);		/* Color de Texto */
+	--text-color-light: hsl(var(--hue), 20%, 70%);	/* Color de Texto Ligero */
+	--body-color: hsl(var(--hue), 40%, 16%);		/* Color del Cuerpo */
+	--container-color: hsl(var(--hue), 40%, 20%);	/* Color del Contenedor */
 
-  /*========== Font weight ==========*/
-  --font-regular: 400;
-  --font-semi-bold: 600;
-  --font-bold: 700;
+	/*========== Font and Typography ==========*/
+	/*.5rem = 8px | 1rem = 16px ...*/
+	--body-font: "Syne", sans-serif;
+	--biggest-font-size: 3rem;			/* 48px */
+	--big-font-size: 1.5rem;			/* 24px */		
+	--h1-font-size: 1.5rem;				/* 24px */
+	--h2-font-size: 1.25rem;			/* 20px */
+	--h3-font-size: 1rem;				/* 16px */
+	--normal-font-size: .938rem;		/* 15.008px */
+	--small-font-size: .813rem;			/* 13.008px */
 
-  /*========== z index ==========*/
-  --z-tooltip: 10;
-  --z-fixed: 100;
+	/*========== Font weight ==========*/
+	--font-regular: 400;
+	--font-semi-bold: 600;
+	--font-bold: 700;
+
+	/*========== z index ==========*/
+	--z-tooltip: 10;
+	--z-fixed: 100;
 }
 
-/*========== Responsive typography==========*/
+/*========== Responsive Typography==========*/
 @media screen and (min-width: 1150px) {
-  :root {
-    --biggest-font-size: 5.5rem;
-    --big-font-size: 2.75rem;
-    --h1-font-size: 2.25rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
-    --normal-font-size: 1.125rem;
-    --small-font-size: .875rem;
-  }
+	:root {
+		--biggest-font-size: 5.5rem; 	/* 88px */
+		--big-font-size: 2.75rem;		/* 44px */
+		--h1-font-size: 2.25rem;		/* 36px */
+		--h2-font-size: 1.5rem;			/* 24px */
+		--h3-font-size: 1.25rem;		/* 20px */
+		--normal-font-size: 1.125rem;	/* 18px */
+		--small-font-size: .875rem;		/* 14px */
+	}
 }
 
 /*=============== BASE ===============*/
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 body,
 input,
 textarea,
 button {
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
+	font-family: var(--body-font);
+	font-size: var(--normal-font-size);
 }
 
 body {
-  background-color: var(--body-color);
-  color: var(--text-color);
+	background-color: var(--body-color);
+	color: var(--text-color);
 }
 
 input,
 button,
 textarea {
-  border: none;
-  outline: none;
+	border: none;
+	outline: none;
 }
 
-h1, h2, h3 {
-  color: var(--title-color);
-  font-weight: var(--font-semi-bold);
+h1,
+h2,
+h3 {
+	color: var(--title-color);
+	font-weight: var(--font-semi-bold);
 }
 
 p {
-  line-height: 130%;
+	line-height: 130%;
 }
 
 ul {
-  list-style: none;
+	list-style: none;
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+	display: block;
+	max-width: 100%;
+	height: auto;
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
-  max-width: 1120px;
-  margin-inline: 1.5rem;
+	max-width: 1120px;
+	margin-inline: 1.5rem;
 }
 
 .grid {
-  display: grid;
-  gap: 1.5rem;
+	display: grid;
+	gap: 1.5rem;
 }
 
 .section {
-  padding-block: 5rem 2rem;
+	padding-block: 5rem 2rem;
 }
 
 .section__title {
-  text-align: center;
-  font-size: var(--h1-font-size);
-  font-weight: var(--font-bold);
-  margin-bottom: 2rem;
+	text-align: center;
+	font-size: var(--h1-font-size);
+	font-weight: var(--font-bold);
+	margin-bottom: 2rem;
 }
 
 .main {
-  overflow: hidden;
+	overflow: hidden;
 }
 
 /*=============== HEADER & NAV ===============*/
