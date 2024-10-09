@@ -186,7 +186,7 @@ img {
 		background-color: hsla(var(--hue), 70%, 4%, .2);
 		backdrop-filter: blur(16px);
 		-webkit-backdrop-filter: blur(16px);
-		width: 60%;
+		width: 70%;
 		height: 100%;
 		padding: 7rem 3rem;
 		transition: right .4s;
@@ -251,7 +251,13 @@ img {
 }
 
 /* Active link */
+.active-link {
+	color: var(--first-color-light);
+}
 
+.active-link::after {
+	width: 30%;
+}
 
 /*=============== HOME ===============*/
 .home__container {
