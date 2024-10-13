@@ -95,3 +95,17 @@ const scrollActive = () =>{
 window.addEventListener('scroll', scrollActive)
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+    origin: 'top', // Esta propiedad define desde qué dirección aparecerá el elemento cuando se revele.
+    distance: '60px', // Establece la distancia que el elemento "viajará" desde su posición inicial hasta su posición final durante la animación.
+    duration: 2500, // Define la duración de la animación en milisegundos.
+    delay: 400, // Establece el retraso antes de que la animación comience, en milisegundos.
+    // reset: true // Animation repeat
+})
+
+sr.reveal('.home__data, .experience, .skills, .contact__container')
+sr.reveal('.home__img', {delay: 600})
+sr.reveal('.home__scroll', {delay: 800})
+sr.reveal('.work__card, .services__card', {interval: 100}) // Define el tiempo (en milisegundos) entre la revelación de múltiples elementos
+sr.reveal('.about__content', {origin: 'right'}) // Define el tiempo (en milisegundos) entre la revelación de múltiples elementos
+sr.reveal('.about__img', {origin: 'left'}) // Define el tiempo (en milisegundos) entre la revelación de múltiples elementos
